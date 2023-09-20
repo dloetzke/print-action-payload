@@ -1,0 +1,25 @@
+{
+  "name": "print-action-payload",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "ncc build index.js --license licenses.txt && terser ./dist/index.js --compress --comments false --output ./dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "dloetzke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dloetzke/print-action-payload/issues"
+  },
+  "homepage": "https://github.com/dloetzke/print-action-payload#readme",
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "@actions/github": "^5.1.1"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.0",
+    "terser": "^5.19.4"
+  }
+}

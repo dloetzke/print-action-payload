@@ -1,0 +1,8 @@
+name: 'Print Action Payload'
+description: 'Prints its webhook event payload.'
+outputs:
+  payload:
+    description: 'the webhook event payload'
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
