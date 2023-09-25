@@ -2,7 +2,7 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 
 try {
-  const payload = JSON.stringify(github.context.payload, undefined, 2);
+  const payload = JSON.stringify(github.context.payload);
   console.log(`The event payload: ${payload}`);
   core.setOutput("payload", payload);
 } catch(error) {

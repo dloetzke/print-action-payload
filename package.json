@@ -4,12 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "ncc build index.js --license licenses.txt && terser ./dist/index.js --compress --comments false --output ./dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "ncc build index.js --license licenses.txt && terser ./dist/index.js --compress --comments false --output ./dist/index.js"
   },
   "keywords": [],
   "author": "dloetzke",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/dloetzke/print-action-payload/issues"
   },
