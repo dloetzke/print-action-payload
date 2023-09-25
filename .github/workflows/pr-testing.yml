@@ -1,0 +1,36 @@
+name: Testing and Linting (PR)
+on:
+  pull_request
+jobs:
+  testing-build:
+    name: ${{ matrix.command }}
+    if: ${{!(startsWith(github.event.pull_request.head.ref, 'dependabot/') || contains(github.event.pull_request.title, 'dependenc'))}}
+    strategy:
+      # Don't cancel all jobs just because one fails.
+      fail-fast: false
+      matrix:
+        command: [npm run build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Run ${{ matrix.command }}
+        run: ${{ matrix.command }}
+
+  testing-dependencies:
+    name: npm ci (Dependency Testing)
+    if: ${{startsWith(github.event.pull_request.head.ref, 'dependabot/') || contains(github.event.pull_request.title, 'dependenc')}}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v3
+      - name: Run npm ci
+        run: npm ci

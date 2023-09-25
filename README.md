@@ -1,10 +1,10 @@
 # Print Action Payload
 
-This action prints its webhook event payload and sets it as the output `payload`.
+This simple action prints its webhook event payload (context about the repo and workflow that has called it) and sets it as the output `payload`.
 
 ## Inputs
 
-No inputs are required.
+**No inputs are required.**
 
 ## Outputs
 
