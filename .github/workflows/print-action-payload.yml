@@ -1,0 +1,11 @@
+name: Print Action Payload
+
+on: workflow_dispatch
+
+jobs:
+    print-action-payload:
+        name: Print Action Payload
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print Action Payload
+              uses: dloetzke/print-action-payload@main
