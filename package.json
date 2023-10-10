@@ -19,6 +19,6 @@
   },
   "devDependencies": {
     "@vercel/ncc": "^0.38.0",
-    "terser": "^5.20.0"
+    "terser": "^5.21.0"
   }
 }
