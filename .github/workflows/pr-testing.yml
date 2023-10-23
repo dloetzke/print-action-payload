@@ -15,7 +15,7 @@ jobs:
       - name: Checkout branch
         uses: actions/checkout@v4
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           cache: npm
       - name: Install dependencies
@@ -31,7 +31,7 @@ jobs:
       - name: Checkout branch
         uses: actions/checkout@v4
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
       - name: Run npm ci
         run: npm ci
       - name: Run npm run build
