@@ -1,6 +1,6 @@
 {
   "name": "print-action-payload",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "This simple action prints its webhook event payload (context about the repo and workflow that have called it) and sets it as an output.",
   "main": "index.js",
   "scripts": {
