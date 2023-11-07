@@ -1,7 +1,7 @@
 {
   "name": "print-action-payload",
   "version": "1.0.0",
-  "description": "",
+  "description": "This simple action prints its webhook event payload (context about the repo and workflow that have called it) and sets it as an output.",
   "main": "index.js",
   "scripts": {
     "build": "ncc build index.js --license licenses.txt && terser ./dist/index.js --compress --comments false --output ./dist/index.js"

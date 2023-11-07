@@ -7,4 +7,5 @@ try {
   core.setOutput("payload", payload);
 } catch(error) {
   core.setFailed(error.message);
+  core.setOutput("payload", error.message);
 }
