@@ -2,7 +2,7 @@ name: 'Print Action Payload'
 description: 'Prints its webhook event payload.'
 outputs:
   payload:
-    description: 'the webhook event payload'
+    description: 'the webhook event payload or (if an error occured) the error message'
 runs:
   using: 'node20'
   main: 'dist/index.js'
